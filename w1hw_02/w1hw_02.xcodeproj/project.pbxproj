@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E6E291B19D08B97009E0B8F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E291A19D08B97009E0B8F /* PhotoViewController.swift */; };
+		5E6E291D19D20695009E0B8F /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E291C19D20695009E0B8F /* PinchViewController.swift */; };
 		5E7093E419BA13FF00446582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7093E319BA13FF00446582 /* AppDelegate.swift */; };
 		5E7093E619BA13FF00446582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7093E519BA13FF00446582 /* ViewController.swift */; };
 		5E7093E919BA13FF00446582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7093E719BA13FF00446582 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		5E6E291A19D08B97009E0B8F /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		5E6E291C19D20695009E0B8F /* PinchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		5E7093DE19BA13FF00446582 /* w1hw_02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w1hw_02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7093E219BA13FF00446582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7093E319BA13FF00446582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				5E6E291A19D08B97009E0B8F /* PhotoViewController.swift */,
 				5E7093EA19BA13FF00446582 /* Images.xcassets */,
 				5E7093E119BA13FF00446582 /* Supporting Files */,
+				5E6E291C19D20695009E0B8F /* PinchViewController.swift */,
 			);
 			path = w1hw_02;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				5E6E291B19D08B97009E0B8F /* PhotoViewController.swift in Sources */,
 				5E70940719BA1D9800446582 /* NotificationsViewController.swift in Sources */,
 				5E70940D19BB925400446582 /* CreateStatusViewController.swift in Sources */,
+				5E6E291D19D20695009E0B8F /* PinchViewController.swift in Sources */,
 				5E70940319BA1D6700446582 /* RequestsViewController.swift in Sources */,
 				5E70940F19BB927B00446582 /* CreatePhotoViewController.swift in Sources */,
 				5E7093E419BA13FF00446582 /* AppDelegate.swift in Sources */,

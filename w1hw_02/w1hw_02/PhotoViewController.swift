@@ -8,21 +8,49 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
-
-    @IBOutlet weak var fullImage: UIImageView!
-    @IBAction func btnDone(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bigImgView: UIImageView!
+    @IBOutlet weak var doneBtnImageView: UIImageView!
+    @IBOutlet weak var actionBtnsImageView: UIImageView!
+    
+    @IBAction func doneBtnTouchUP(sender: AnyObject) {
+        dismissViewControllerAnimated(true , completion: nil)
     }
     
-    var passedInImage: UIImage!
-    
+    @IBAction func pinchScrollView(sender: UIPinchGestureRecognizer) {
+        bigImgView.transform = CGAffineTransformMakeScale(sender.scale, sender.scale)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullImage.image = passedInImage
+        
+        scrollView.contentSize = CGSize(width: 320, height: 2000)
+        scrollView.delegate = self
+        //scrollView.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.8, alpha: 1)
+        
+        
         // Do any additional setup after loading the view.
     }
 
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var off = scrollView.contentOffset
+        println("off.y: \(off.y) bigImgView.frame.origin.y \(bigImgView.frame.origin.y)")
+        
+        if (off.y < 0) {
+            var pct = (50 - abs(off.y)) / 50
+            //println("pct: \(pct)")
+            doneBtnImageView.alpha = pct
+            actionBtnsImageView.alpha = pct
+            self.view.backgroundColor = UIColor(white: 0, alpha: pct)
+        }
+        
+        
+        if (off.y < -50) {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
